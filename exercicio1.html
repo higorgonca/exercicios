@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .form-field {
+            max-width: 240px;
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 10px;
+            max-width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn input {
+            background-color: rgb(19, 100, 223);
+            color: white;
+            padding: 10px 20px 10px 20px;
+            border-radius: 20px;
+
+        }
+
+        .btn input:hover {
+            background-color: rgb(115, 168, 247);
+        }
+
+        .user input {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-field">
+            <label for="nomepessoa"><h2>Informe seu nome </h2></label> 
+                <div class="user">
+                    <input type="text" autocomplete="off" name="username" id="nomezin">
+                </div>    
+            <div class="btn">
+                <input type="submit" name="botao" id="" onclick="nomeDaPessoa()">
+                
+            </div>
+        </div>
+        <h1></h1>
+    </div>
+    <script>
+        
+        function nomeDaPessoa(){
+            //aqui eu estou pegando meu input que tem o id= nomezin
+            const nomezin = document.querySelector('#nomezin');
+
+            //aqui eu estou pegando meu h1
+            const h1 = document.querySelector('h1');
+
+            //aqui eu estou atribuindo o valor escrito no meu input com id nomezin, para o texto do h1
+            h1.textContent = nomezin.value
+            
+
+        }
+    </script>
+
+
+</body>
+</html>
