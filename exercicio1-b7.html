@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function calcularPreco(metragem, quartos) {
+			let m2 = 3000;
+
+			if (quartos === 1) {
+				console.log(`A casa custa  R$${metragem * m2 * 1}`);
+			} else if (quartos === 2) {
+				console.log(`A casa custa  R$${metragem * m2 * 1.2}`);
+			} else if (quartos === 3) {
+				console.log(`A casa custa  R$${metragem * m2 * 1.5}`);
+			} else {
+				console.log(`Não é possivel fazer com este número de quartos`);
+			}
+
+		}
+
+		let preco = calcularPreco(430, 1);
+
+	</script>
+</body>
+
+</html>

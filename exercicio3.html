@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        *,
+        :root {
+            color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin-top: 12px;
+            background-color: rgb(170, 217, 255);
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+
         }
 
         .form-field {
-            max-width: 240px;
+            width: 264px;
+            height: 200px;
             display: flex;
             align-items: center;
             flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgb(14, 91, 179);
         }
 
         .btn {
@@ -30,40 +61,56 @@
         }
 
         .btn input {
-            background-color: rgb(19, 100, 223);
+            background-color: rgb(20, 97, 240);
             color: white;
             padding: 10px 20px 10px 20px;
             border-radius: 20px;
-
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0px 0px 24px 0px snow;
         }
 
         .btn input:hover {
-            background-color: rgb(115, 168, 247);
+            background-color: rgb(32, 117, 245)
         }
 
         .user input {
             text-align: center;
+            background-color: rgb(150, 194, 252);
+            border: 0;
+            padding: 8px;
+            border-radius: 10px;
         }
 
+        #nomezin {
+            outline: 0;
+        }
+
+        h2 {
+            color: rgb(255, 255, 255);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="form-field">
-            <label for="nomepessoa"><h2>Informe seu nome </h2></label> 
-                <div class="user">
-                    <input type="text" autocomplete="off" name="username" id="nomezin">
-                </div>    
+            <label for="nomepessoa">
+                <h2>Informe seu nome </h2>
+            </label>
+            <div class="user">
+                <input type="text" autocomplete="off" name="username" id="nomezin">
+            </div>
             <div class="btn">
                 <input type="submit" name="botao" id="" onclick="nomeDaPessoa()">
-                
+
             </div>
         </div>
         <h1></h1>
     </div>
     <script>
-        
-        function nomeDaPessoa(){
+
+        function nomeDaPessoa() {
             //aqui eu estou pegando meu input que tem o id= nomezin
             const nomezin = document.querySelector('#nomezin');
 
@@ -71,11 +118,12 @@
             const h1 = document.querySelector('h1');
 
             //aqui eu estou atribuindo o valor escrito no meu input com id nomezin, para o texto do h1
-            h1.textContent = nomezin.value.toLocaleLowerCase();
+            h1.textContent = nomezin.value.toLocaleUpperCase();
 
         }
     </script>
 
 
 </body>
+
 </html>

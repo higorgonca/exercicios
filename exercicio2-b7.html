@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function validar(usuario, senha) {
+            if (usuario === 'Pedro' && senha === 123) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let usuario = 'higor'
+        let senha = 123
+
+        let validação = validar(usuario, senha)
+        if (validação) {
+            console.log('Acesso concedido');
+        } else {
+            console.log('Acesso negado');
+        }
+    </script>
+</body>
+
+</html>
